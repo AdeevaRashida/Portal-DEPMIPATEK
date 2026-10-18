@@ -9,7 +9,37 @@ class PageController extends Controller
 {
     public function home(): View
     {
-        $faqs = [
+        return view('home', ['faqs' => $this->faqs()]);
+    }
+
+    //ini nanti diganti pake auth, sementara ini pake dummy data dulu
+    public function login(): View
+    {
+        return view('login');
+    }
+
+    public function depmipatek(): View
+    {
+        $misi = $this->misiPoints();
+
+        return view('depmipatek', ['misi' => $misi]);
+    }
+
+    public function dashboard(): View
+    {
+        return view('dashboard', [
+            'faqs' => $this->faqs(),
+            'services' => $this->services(),
+            'user' => [
+                'name' => 'Nama User',
+                'photo' => 'images/profile.jpg',
+            ],
+        ]);
+    }
+
+    private function faqs(): array
+    {
+        return [
             [
                 'question' => 'Bagaimana cara login ke AKSARA Depmipatek?',
                 'answer' => 'Gunakan akun Taruna, Dosen, atau Civitas Akademika yang telah terdaftar melalui tombol Login pada bagian atas halaman.',
@@ -26,16 +56,31 @@ class PageController extends Controller
                 'question' => 'Ke mana saya menghubungi jika mengalami kendala?',
                 'answer' => 'Silakan hubungi bagian akademik Depmipatek melalui informasi kontak pada bagian bawah halaman.',
             ],
+            [
+                'question' => 'Bagaimana jika saya lupa password?',
+                'answer' => 'Hubungi bagian akademik Depmipatek untuk meminta pengaturan ulang kata sandi akun Anda.',
+            ],
+            [
+                'question' => 'Informasi apa saja yang tersedia di AKSARA?',
+                'answer' => 'AKSARA menyediakan informasi dan layanan akademik yang terintegrasi bagi Taruna, Dosen, dan Civitas Akademika.',
+            ],
         ];
-
-        return view('home', ['faqs' => $faqs]);
     }
 
-    public function depmipatek(): View
+    //nanti servicesnya manggil ke database, tapi sementara ini pake dummy data dulu
+    private function services(): array
     {
-        $misi = $this->misiPoints();
+        $services = [];
 
-        return view('depmipatek', ['misi' => $misi]);
+        for ($i = 1; $i <= 8; $i++) {
+            $services[] = [
+                // 'title' => 'Layanan ' . $i,
+                'title' => 'Coming Soon.',
+                'url' => '#',
+            ];
+        }
+
+        return $services;
     }
 
     private function misiPoints(): Collection

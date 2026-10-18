@@ -38,7 +38,7 @@
         </div>
     </section>
 
-    <section class="section section--tight">
+    <section class="section section--tight" style="clamp(32px, 7vw, 56px);">
         <div class="container">
             <h2 class="section-heading">VISI</h2>
             <p class="visi-text">
