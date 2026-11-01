@@ -1,9 +1,9 @@
 <footer class="site-footer">
     <div class="container">
         <div>
-            <div class="footer__brand">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo Depmipatek" class="footer__logo">
-                <div class="footer__social">
+            <div class="footer-brand">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo Depmipatek" class="footer-logo">
+                <div class="footer-social">
                     <div>
                         <h3>AKSARA DEPMIPATEK</h3>
                         <p>Departemen Matematika, IPA, Teknologi</p>
@@ -25,7 +25,7 @@
         </div>
 
 
-        <div class="footer__info">
+        <div class="footer-info">
             <h4>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round">
@@ -53,7 +53,7 @@
         </div>
     </div>
 
-    <div class="footer__bottom">
+    <div class="footer-bottom">
         &copy; {{ date('Y') }} AKSARA Depmipatek
     </div>
 </footer>

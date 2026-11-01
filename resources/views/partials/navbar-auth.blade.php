@@ -1,12 +1,12 @@
 <header class="navbar">
     <div class="container">
-        <a href="{{ route('dashboard') }}" class="navbar__brand">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo Depmipatek" class="navbar__logo">
-            <span class="navbar__title">DEPMIPATEK</span>
+        <a href="{{ route('dashboard') }}" class="navbar-brand">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo Depmipatek" class="navbar-logo">
+            <span class="navbar-title">DEPMIPATEK</span>
         </a>
 
-        <div class="navbar__profile">
-            <span class="navbar__avatar">
+        <div class="navbar-profile">
+            <span class="navbar-avatar">
                 @if(!empty($user['photo']))
                 <img src="{{ asset($user['photo']) }}" alt="Foto profil">
                 @else
@@ -17,8 +17,8 @@
                 </svg>
                 @endif
             </span>
-            <span class="navbar__name">{{ $user['name'] ?? 'Nama User' }}</span>
-            <a href="{{ route('home') }}" class="navbar__btn">Sign Out</a>
+            <span class="navbar-name">{{ $user['name'] ?? 'Nama User' }}</span>
+            <a href="{{ route('home') }}" class="navbar-btn">Sign Out</a>
         </div>
     </div>
 </header>

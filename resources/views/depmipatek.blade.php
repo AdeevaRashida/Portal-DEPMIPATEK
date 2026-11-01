@@ -4,21 +4,21 @@
 
 @section('content')
 
-    <section class="hero hero--page" style="background-image: url('{{ asset('images/hero-depmipatek.png') }}');">
+    <section class="hero hero-page" style="background-image: url('{{ asset('images/hero-depmipatek.png') }}');">
         <div class="container">
-            <h1 class="hero__title">DEPMIPATEK</h1>
-            <span class="hero__rule"></span>
-            <p class="hero__subtitle">Departemen Matematika, IPA, dan Teknologi</p>
+            <h1 class="hero-title">DEPMIPATEK</h1>
+            <span class="hero-rule"></span>
+            <p class="hero-subtitle">Departemen Matematika, IPA, dan Teknologi</p>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
             <div class="about">
-                <div class="about__media">
+                <div class="about-media">
                     <img src="{{ asset('images/tentang-depmipatek.jpg') }}" alt="Gedung Depmipatek">
                 </div>
-                <div class="about__body">
+                <div class="about-body">
                     <h2 class="section-heading">Tentang DEPMIPATEK</h2>
                     <p>
                         Departemen Matematika Ilmu Pengetahuan Alam dan Teknologi (Depmipatek)
@@ -38,7 +38,7 @@
         </div>
     </section>
 
-    <section class="section section--tight" style="clamp(32px, 7vw, 56px);">
+    <section class="section section-tight" style="clamp(32px, 7vw, 56px);">
         <div class="container">
             <h2 class="section-heading">VISI</h2>
             <p class="visi-text">
@@ -53,7 +53,7 @@
         </div>
     </section>
 
-    <section class="section section--tight">
+    <section class="section section-tight">
         <div class="container-misi">
             <h2 class="section-heading">MISI</h2>
 
@@ -64,7 +64,7 @@
                             <div class="misi-slide">
                                 @foreach($pair as $item)
                                     <div class="misi-item">
-                                        <span class="misi-item__number">{{ $item['number'] }}</span>
+                                        <span class="misi-item-number">{{ $item['number'] }}</span>
                                         <p>{{ $item['text'] }}</p>
                                     </div>
                                 @endforeach
@@ -94,7 +94,7 @@
         </div>
     </section>
 
-    <section class="section section--tight">
+    <section class="section section-tight">
         <div class="container">
             <h2 class="section-heading">Struktur Organisasi</h2>
             <figure class="struktur-figure">
@@ -104,13 +104,13 @@
         </div>
     </section>
 
-    <section class="section section--tight">
+    <section class="section section-tight">
         <div class="container">
             <h2 class="section-heading">Program Studi Depmipatek</h2>
 
             <div class="prodi-grid">
                 <div class="prodi-card">
-                    <h3 class="prodi-card__title">
+                    <h3 class="prodi-card-title">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round">
                             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
@@ -129,7 +129,7 @@
                 </div>
 
                 <div class="prodi-card">
-                    <h3 class="prodi-card__title">
+                    <h3 class="prodi-card-title">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 2L19.5 9h-4L21 15h-4.5L22 21H2l5.5-6H3l5.5-6h-4L12 2z"></path>
@@ -148,7 +148,7 @@
                 </div>
 
                 <div class="prodi-card">
-                    <h3 class="prodi-card__title">
+                    <h3 class="prodi-card-title">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round">
                             <circle cx="12" cy="12" r="3"></circle>
@@ -171,7 +171,7 @@
         </div>
     </section>
 
-    <section class="section section--tight">
+    <section class="section section-tight">
         <div class="container-lab">
             <h2 class="section-heading">Fasilitas Laboratorium</h2>
 

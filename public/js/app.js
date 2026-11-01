@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function initFaq() {
-  var items = document.querySelectorAll('.faq__item');
+  var items = document.querySelectorAll('.faq-item');
 
   items.forEach(function (item) {
-    var question = item.querySelector('.faq__question');
-    var answer = item.querySelector('.faq__answer');
+    var question = item.querySelector('.faq-question');
+    var answer = item.querySelector('.faq-answer');
 
     question.addEventListener('click', function () {
       var open = item.getAttribute('data-open') !== 'true';
@@ -22,7 +22,7 @@ function initFaq() {
   window.addEventListener('resize', function () {
     items.forEach(function (item) {
       if (item.getAttribute('data-open') === 'true') {
-        var answer = item.querySelector('.faq__answer');
+        var answer = item.querySelector('.faq-answer');
         answer.style.maxHeight = answer.scrollHeight + 'px';
       }
     });

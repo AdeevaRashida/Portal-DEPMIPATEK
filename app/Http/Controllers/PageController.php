@@ -67,7 +67,7 @@ class PageController extends Controller
         ];
     }
 
-    //nanti servicesnya manggil ke database, tapi sementara ini pake dummy data dulu
+    //nanti servicesnya manggil ke database (link ke website lain), tapi sementara ini pake dummy data dulu
     private function services(): array
     {
         $services = [];
